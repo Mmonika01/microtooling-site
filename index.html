@@ -268,13 +268,13 @@
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
   (function(){
-    emailjs.init("YOUR_EMAILJS_USER_ID"); // 🔹 Replace with your EmailJS User ID
+    emailjs.init("0dd2o7MtcSTI4e00X"); // 🔹 Replace with your EmailJS User ID
   })();
 
   document.getElementById("contact-form").addEventListener("submit", function(e){
     e.preventDefault();
 
-    emailjs.send("service_9x75eed","YOUR_TEMPLATE_ID",{
+    emailjs.send("service_9x75eed","template_p1bd6pd",{
       to_email: "design@microtooling.in",
       from_name: this.name.value,
       from_email: this.email.value,
@@ -329,3 +329,4 @@
   </script>
 </body>
 </html>
+
