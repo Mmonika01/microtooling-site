@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,38 +13,30 @@
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css" />
   
-  <style>
-  body {
-      margin: 0;
-      height: 100vh;
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      /* You can change the angle (135deg) and colors */
-    }
-  </style>
+ 
 </head>
 
 
 <body>
-  <!-- Animated Background -->
-  <div class="background-animation"></div>
 
-  <!-- HEADER -->
+<!-- HEADER -->
   <header class="navbar">
-  <div class="logo-title">
-     <img src="3bf89a3c-2859-4772-9625-2da8c0737619.png" alt="Logo" class="logo">
-    <span class="site-title">MicroTooling Solution</span>
-  </div>
-  <nav class="menu">
-    <a href="#about">About</a>
-    <a href="#products">Products</a>
-    <a href="#machinery">Machinery</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+    <div class="logo-title">
+      <img src="images/logo.png" alt="Logo" class="logo">
+      <span class="site-title">MicroTooling Solutions</span>
+    </div>
+    <nav class="menu">
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#machinery">Machinery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
 
   <!-- Birds Effect Section -->
@@ -89,51 +80,64 @@
         
 <!-- Key SKILLS class="img-fluid rounded shadow -->
    
-<section class="key-skills-section"> 
-<h2 class="section-title">Key Skill</h2> 	
-   <div class="container">
-   
+<!-- 🔹 Key Skills Section -->
+<section class="key-skills-section">
+  <h2 class="section-title">Key Skills</h2>
+  <div class="skills-container">
+
     <div class="step">
       <div class="circle">01</div>
-      <h3>Strong Management</h3>
-      <p>Efficient and strategic execution by experienced leaders.</p>
+      <div class="content">
+        <h3>Strong Management</h3>
+        <p>Efficient and strategic execution by experienced leaders.</p>
+      </div>
       <div class="icon">👨‍💼</div>
     </div>
 
     <div class="step">
       <div class="circle">02</div>
-      <h3>Quality Assurance</h3>
-      <p>Every product rigorously checked for perfection.</p>
+      <div class="content">
+        <h3>Quality Assurance</h3>
+        <p>Every product rigorously checked for perfection.</p>
+      </div>
       <div class="icon">✔️</div>
     </div>
 
     <div class="step">
       <div class="circle">03</div>
-      <h3>Process Plan Team</h3>
-      <p>Optimizing workflows to ensure efficiency and precise delivery.</p>
+      <div class="content">
+        <h3>Process Plan Team</h3>
+        <p>Optimizing workflows to ensure efficiency and precise delivery.</p>
+      </div>
       <div class="icon">📊</div>
     </div>
 
     <div class="step">
       <div class="circle">04</div>
-      <h3>Controlled Shop Floor</h3>
-      <p>Maintaining a clean, organized, and controlled environment.</p>
+      <div class="content">
+        <h3>Controlled Shop Floor</h3>
+        <p>Maintaining a clean, organized, and controlled environment.</p>
+      </div>
       <div class="icon">🏭</div>
     </div>
 
     <div class="step">
       <div class="circle">05</div>
-      <h3>Qualified Professionals</h3>
-      <p>Certified workforce trained to stay ahead of advancements.</p>
+      <div class="content">
+        <h3>Qualified Professionals</h3>
+        <p>Certified workforce trained to stay ahead of advancements.</p>
+      </div>
       <div class="icon">🎓</div>
     </div>
+
   </div>
 </section>
+
 
   <!-- PRODUCTS -->
 <section id="products" class="products">
   <div class="container">
-    <h2 class="section-title">Our Products</h2>
+    <h2 class="section-title glow-text">Our Products</h2>
     <div class="row g-4">
       
       <div class="col-md-4">
@@ -147,7 +151,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="col-md-4">
         <div class="product-card">
           <div class="product-image">
@@ -212,9 +216,10 @@
   </div>
 </section>
 
+
 <section id="customer-logos" class="customer-logos">
     <div class="customercontainer">
-        <h2 class="section-title">Our Trusted Customers</h2>
+        <h2 class="section-title glow-text">Our Trusted Customers</h2>
         
         <!-- Running Logos Container -->
         <div class="logos-slider">
@@ -289,24 +294,31 @@
   </section>
 
  <!-- CONTACT -->
+<!-- ✅ Contact Section -->
 <section id="contact" class="contact">
   <div class="container">
     <h2 class="section-title">Get in Touch</h2>
-    
+
     <form id="contact-form" class="glass-card">
       <div class="input-group">
         <i class="fas fa-user"></i>
-        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="text" name="name" required />
+        <label>Your Name</label>
       </div>
+
       <div class="input-group">
         <i class="fas fa-envelope"></i>
-        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="email" name="email" required />
+        <label>Your Email</label>
       </div>
-      <div class="input-group">
+
+      <div class="input-group textarea">
         <i class="fas fa-comment-dots"></i>
-        <textarea name="message" placeholder="Your Message" required></textarea>
+        <textarea name="message" required></textarea>
+        <label>Your Message</label>
       </div>
-      <button type="submit">
+
+      <button type="submit" class="btn-gradient">
         <span>Send Message</span>
         <i class="fas fa-paper-plane"></i>
       </button>
