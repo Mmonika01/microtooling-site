@@ -110,25 +110,31 @@ body {
   color: white;
 }
 
-/* Logo + Title */
+
+/* Logo + Title Container */
 .logo-title {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  align-items: center;   /* Vertically center logo + text */
+  gap: 12px;             /* Space between logo and text */
 }
 
-/* Logo size */
+/* Make logo circular */
 .logo {
-  width: 45px;   /* reduce/increase as you like */
-  height: auto;
+  width: 50px;          /* Adjust size as you like */
+  height: 50px;
+  border-radius: 50%;   /* Makes it a circle */
+  object-fit: cover;    /* Prevents stretching */
+  border: 2px solid #fff;  /* Optional border for contrast */
+  background: #fff;        /* Optional background to look clean */
 }
 
 /* Site title */
 .site-title {
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: bold;
   color: white;
 }
+
 
 /* Menu */
 .menu a {
@@ -678,6 +684,7 @@ font-weight: 700;
 
 /* FOOTER */
 footer { background: #111; color: #bbb; text-align: center; padding: 15px; }
+
 
 
 
