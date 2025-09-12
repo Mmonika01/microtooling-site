@@ -21,25 +21,40 @@ body {
 }
 
 
-/* Navbar */
+/* Fixed Navbar */
 .navbar {
-  position: fixed;   /* stays at top */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1000; /* stays above content */
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background: #0d3b46;
-  padding: 10px 20px;
-  z-index: 1000;
+  justify-content: space-between;
+  padding: 10px 40px; /* adjust spacing */
+  background: #0d3b46; /* keep your dark background */
 }
 
-/* Desktop menu */
+/* Logo + Title */
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Menu */
 .menu {
   display: flex;
-  gap: 15px;
+  gap: 30px;
 }
+
+/* Prevent content from hiding behind navbar */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 70px; /* same as navbar height */
+}
+
 
 /* Links */
 .menu a {
@@ -798,6 +813,7 @@ font-weight: 700;
 
 /* FOOTER */
 footer { background: #111; color: #bbb; text-align: center; padding: 15px; }
+
 
 
 
