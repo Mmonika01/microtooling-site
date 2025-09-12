@@ -17,18 +17,58 @@ body {
 
 /* Navbar */
 /* 🌟 Navbar */
+/* Navbar base */
 .navbar {
-  background: rgba(15, 32, 39, 0.9);
-  backdrop-filter: blur(10px);
-  padding: 15px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  background: #0d3b46; /* adjust as needed */
+  padding: 10px 20px;
 }
+
+/* Desktop menu */
+.menu {
+  display: flex;
+  gap: 15px;
+}
+
+/* Links */
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+/* Hamburger (hidden on desktop) */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive rules */
+@media (max-width: 768px) {
+  .menu {
+    display: none;                /* Hide menu by default */
+    flex-direction: column;
+    background: #0d3b46;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .menu.show {
+    display: flex;                /* Show when toggled */
+  }
+
+  .hamburger {
+    display: block;               /* Show hamburger on mobile */
+  }
+}
+
 .about {
   background: linear-gradient(to right, #eaf6ff, #c6e2f9);
   padding: 60px 10%;
@@ -684,6 +724,7 @@ font-weight: 700;
 
 /* FOOTER */
 footer { background: #111; color: #bbb; text-align: center; padding: 15px; }
+
 
 
 
