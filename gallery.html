@@ -167,79 +167,85 @@
 
   <!-- Load Images Dynamically -->
   <script>
-   fetch("images.json")
-  .then(res => res.json())
-  .then(images => {
-    let container = document.getElementById("gallery-container");
+ document.addEventListener("DOMContentLoaded", () => {
+  fetch("images.json")
+    .then(res => res.json())
+    .then(images => {
+      let container = document.getElementById("gallery-container");
 
-    images.forEach((img, index) => {
-      container.innerHTML += `
-        <div class="gallery-item" 
-             data-category="${img.category}" 
-             data-caption="${img.caption.toLowerCase()}"
-             data-aos="zoom-in" 
-             data-aos-delay="${index * 100}">
-          <a data-fancybox="gallery" href="${img.src}" data-caption="${img.caption}">
-            <img src="${img.src}" alt="${img.caption}">
-          </a>
-        </div>
-      `;
-    });
-
-    const items = document.querySelectorAll(".gallery-item");
-    const buttons = document.querySelectorAll(".filter-buttons button");
-    const searchInput = document.getElementById("searchInput");
-
-    // Add "No results" placeholder
-    const noResults = document.createElement("div");
-    noResults.className = "no-results text-center";
-    noResults.innerText = "⚠️ No results found. Try another category or search.";
-    noResults.style.display = "none";
-    container.appendChild(noResults);
-
-    function applyFilters() {
-      const filter = document.querySelector(".filter-buttons button.active").dataset.filter;
-      const searchText = searchInput.value.toLowerCase();
-      let visibleCount = 0;
-
-      items.forEach(item => {
-        const matchesCategory = (filter === "all" || item.dataset.category === filter);
-        const matchesSearch = item.dataset.caption.includes(searchText);
-
-        if (matchesCategory && matchesSearch) {
-          item.style.display = "inline-block"; // important for masonry
-          visibleCount++;
-        } else {
-          item.style.display = "none";
-        }
+      images.forEach((img, index) => {
+        container.innerHTML += `
+          <div class="gallery-item" 
+               data-category="${img.category}" 
+               data-caption="${img.caption.toLowerCase()}"
+               data-aos="zoom-in" 
+               data-aos-delay="${index * 100}">
+            <a data-fancybox="gallery" href="${img.src}" data-caption="${img.caption}">
+              <img src="${img.src}" alt="${img.caption}">
+            </a>
+          </div>
+        `;
       });
 
-      noResults.style.display = visibleCount === 0 ? "block" : "none";
-    }
+      const items = document.querySelectorAll(".gallery-item");
+      const buttons = document.querySelectorAll(".filter-buttons button");
+      const searchInput = document.getElementById("searchInput");
 
-    buttons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        buttons.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        applyFilters();
+      // Add "No results" placeholder
+      const noResults = document.createElement("div");
+      noResults.className = "no-results text-center";
+      noResults.innerText = "⚠️ No results found. Try another category or search.";
+      noResults.style.display = "none";
+      container.appendChild(noResults);
+
+      function applyFilters() {
+        const filter = document.querySelector(".filter-buttons button.active").dataset.filter;
+        const searchText = searchInput.value.toLowerCase();
+        let visibleCount = 0;
+
+        items.forEach(item => {
+          const matchesCategory = (filter === "all" || item.dataset.category === filter);
+          const matchesSearch = item.dataset.caption.includes(searchText);
+
+          if (matchesCategory && matchesSearch) {
+            item.style.display = "inline-block"; // important for masonry
+            visibleCount++;
+          } else {
+            item.style.display = "none";
+          }
+        });
+
+        noResults.style.display = visibleCount === 0 ? "block" : "none";
+      }
+
+      // Guard for searchInput existing
+      if (searchInput) {
+        searchInput.addEventListener("input", applyFilters);
+      }
+
+      buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          buttons.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          applyFilters();
+        });
+      });
+
+      // Initial load
+      applyFilters();
+
+      // Init AOS animations
+      AOS.init({
+        duration: 800,
+        once: true
       });
     });
-
-    searchInput.addEventListener("input", applyFilters);
-
-    // Initial load
-    applyFilters();
-
-    // Initialize AOS after elements are inserted
-    AOS.init({
-      duration: 800,
-      once: true
-    });
-  });
+});
 
   </script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
 </body>
 </html>
+
 
