@@ -25,21 +25,26 @@
 <body>
 
 <!-- HEADER -->
-  <header class="navbar">
-    <div class="logo-title">
+ <header class="navbar">
+  <div class="logo-title">
+    <img src="images/SITEIDENTITY.png" alt="Logo" class="logo">
+    <span class="site-title">MicroTooling Solutions</span>
+  </div>
 
-		
-      <img src="images/SITEIDENTITY.png" alt="Logo" class="logo">
-      <span class="site-title">MicroTooling Solutions</span>
-    </div>
-    <nav class="menu">
-      <a href="#about">About</a>
-      <a href="#products">Products</a>
-      <a href="#machinery">Machinery</a>
-	  <a href="gallery.html" class="active">Gallery</a> <!-- Highlight current -->
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <!-- Hamburger Button (only for mobile) -->
+  <div class="hamburger" onclick="toggleMenu()">
+    ☰
+  </div>
+
+  <!-- Navigation -->
+  <nav class="menu" id="menu">
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#machinery">Machinery</a>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
 
 <!-- 🖼 Hero Carousel -->
@@ -503,6 +508,7 @@
   </script>
 </body>
 </html>
+
 
 
 
