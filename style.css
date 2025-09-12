@@ -1,10 +1,6 @@
 
-/* Global */
 
-html, body {
-  margin: 0;
-  padding: 0;
-}
+/* Global */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -12,7 +8,7 @@ body {
   background-size: 800% 800%;
   animation: gradientShift 18s ease infinite;
   color: #fff;
-  /*padding-top: 70px; /* keep this so content doesn’t hide behind navbar */
+  padding-top: 70px; /* adjust = navbar height */
 }
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
@@ -21,40 +17,23 @@ body {
 }
 
 
-/* Fixed Navbar */
+/* Navbar */
+/* 🌟 Navbar */
+/* Navbar base */
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000; /* stays above content */
+  position: relative; 
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 10px 40px; /* adjust spacing */
-  background: #0d3b46; /* keep your dark background */
-}
-
-/* Logo + Title */
-.logo-title {
-  display: flex;
   align-items: center;
-  gap: 10px;
+  background: #0d3b46; /* adjust as needed */
+  padding: 10px 20px;
 }
 
-/* Menu */
+/* Desktop menu */
 .menu {
   display: flex;
-  gap: 30px;
+  gap: 15px;
 }
-
-/* Prevent content from hiding behind navbar */
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  padding-top: 70px; /* same as navbar height */
-}
-
 
 /* Links */
 .menu a {
@@ -813,10 +792,6 @@ font-weight: 700;
 
 /* FOOTER */
 footer { background: #111; color: #bbb; text-align: center; padding: 15px; }
-
-
-
-
 
 
 
