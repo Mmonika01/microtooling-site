@@ -1,9 +1,14 @@
+
+
+clean the code and make perfect 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Microtooling Solutions</title>
+  <title>Microtooling</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -13,198 +18,528 @@
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css" />
+  
+ 
 </head>
+
+
 <body>
 
 <!-- HEADER -->
-<header class="navbar fixed-top">
+ <header class="navbar">
   <div class="logo-title">
     <img src="images/SITEIDENTITY.png" alt="Logo" class="logo">
     <span class="site-title">MicroTooling Solutions</span>
   </div>
 
-  <!-- Hamburger (mobile only) -->
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <!-- Hamburger Button (only for mobile) -->
+  <div class="hamburger" onclick="toggleMenu()">
+    ☰
+  </div>
 
   <!-- Navigation -->
   <nav class="menu" id="menu">
     <a href="#about">About</a>
     <a href="#products">Products</a>
     <a href="#machinery">Machinery</a>
-    <a href="gallery.html">Gallery</a>
+    <a href="gallery.html" class="active">Gallery</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<!-- HERO -->
+
+<!-- 🖼 Hero Carousel -->
 <section id="hero-carousel">
   <div id="mainCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+    
+    <!-- Progress bar -->
     <div class="carousel-progress"></div>
+
     <div class="carousel-inner">
 
-      <!-- Slide 1 -->
+      <!-- First Slide -->
       <div class="carousel-item active">
         <img src="images/cauroselImage3.jpg" class="d-block w-100" alt="Workshop">
-        <div class="carousel-caption">
+        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
           <h1 class="typing">Welcome to Microtooling Solution</h1>
           <p>Precision Plastic Injection Moulds & Components</p>
           <a href="#contact" class="btn-hero">Get in Touch</a>
         </div>
       </div>
 
-      <!-- Slide 2 -->
+      <!-- Second Slide -->
       <div class="carousel-item">
         <img src="images/cauroselImage3.jpg" class="d-block w-100" alt="Workshop">
-        <div class="carousel-caption">
+        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
           <h1 class="typing">State-of-the-Art Facilities</h1>
           <p>Modern machinery delivering unmatched accuracy</p>
           <a href="#products" class="btn-hero">View Products</a>
         </div>
       </div>
 
-      <!-- Slide 3 -->
+      <!-- Third Slide -->
       <div class="carousel-item">
         <img src="images/cauroselImage3.jpg" class="d-block w-100" alt="Workshop">
-        <div class="carousel-caption">
+        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
           <h1 class="typing">Trusted Engineering Partner</h1>
           <p>Reliable solutions across industries</p>
           <a href="#about" class="btn-hero">Learn More</a>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="about">
+
+
+  <!-- ABOUT -->
+<section class="about">
   <div class="about-container">
     <div class="about-text">
       <h2>ABOUT US</h2>
-      <p><strong>Microtooling Solutions</strong> specializes in Plastic Moulds, Compression Moulds, PDC & GDC Dies, and Jigs & Fixtures. With modern machinery and a skilled workforce, we ensure accuracy, durability, and efficiency in every project.</p>
-      <p>We provide innovative solutions that drive performance, improve productivity, and support long-term growth for our clients.</p>
-      <p><strong>GST:</strong> 33BZYPK4498J1ZF</p>
+      <p>
+        <strong>Microtooling Solutions</strong> specializes in the manufacturing of
+        <em>Plastic Moulds, Compression Moulds, PDC & GDC Dies, and Jigs & Fixtures</em>.
+        With modern machinery and a skilled workforce, we ensure accuracy, durability,
+        and efficiency in every project.
+      </p>
+      <p>
+        Established with a vision of quality and innovation, we provide solutions that
+        drive performance, improve productivity, and support long-term growth for our clients.
+      </p>
+      <p>
+        <strong>GST:</strong> 33BZYPK4498J1ZF
+      </p>
     </div>
     <div class="about-img">
-      <img src="images/company.jpeg" alt="Company Building">
+      <img src="images/company.jpeg" alt="Microtooling Solutions Building">
     </div>
   </div>
 </section>
-
-<!-- KEY SKILLS -->
+        
+        
+<!-- Key SKILLS class="img-fluid rounded shadow -->
+   
+<!-- 🔹 Key Skills Section -->
 <section class="key-skills-section">
   <h2 class="section-title">Key Skills</h2>
   <div class="skills-container">
 
-    <div class="step"><div class="circle">01</div><div class="content"><h3>Strong Management</h3><p>Efficient and strategic execution by experienced leaders.</p></div><div class="icon">👨‍💼</div></div>
-    <div class="step"><div class="circle">02</div><div class="content"><h3>Quality Assurance</h3><p>Every product rigorously checked for perfection.</p></div><div class="icon">✔️</div></div>
-    <div class="step"><div class="circle">03</div><div class="content"><h3>Process Plan Team</h3><p>Optimizing workflows for precise delivery.</p></div><div class="icon">📊</div></div>
-    <div class="step"><div class="circle">04</div><div class="content"><h3>Controlled Shop Floor</h3><p>Maintaining a clean, organized environment.</p></div><div class="icon">🏭</div></div>
-    <div class="step"><div class="circle">05</div><div class="content"><h3>Qualified Professionals</h3><p>Certified workforce trained in latest advancements.</p></div><div class="icon">🎓</div></div>
-    <div class="step"><div class="circle">06</div><div class="content"><h3>Committed Deliveries</h3><p>On-time schedules ensuring reliability and trust.</p></div><div class="icon">⏱️</div></div>
-    <div class="step"><div class="circle">07</div><div class="content"><h3>24-Hour Working Shift</h3><p>Round-the-clock operations for urgent demands.</p></div><div class="icon">🌙</div></div>
+    <div class="step">
+      <div class="circle">01</div>
+      <div class="content">
+        <h3>Strong Management</h3>
+        <p>Efficient and strategic execution by experienced leaders.</p>
+      </div>
+      <div class="icon">👨‍💼</div>
+    </div>
+
+    <div class="step">
+      <div class="circle">02</div>
+      <div class="content">
+        <h3>Quality Assurance</h3>
+        <p>Every product rigorously checked for perfection.</p>
+      </div>
+      <div class="icon">✔️</div>
+    </div>
+
+    <div class="step">
+      <div class="circle">03</div>
+      <div class="content">
+        <h3>Process Plan Team</h3>
+        <p>Optimizing workflows to ensure efficiency and precise delivery.</p>
+      </div>
+      <div class="icon">📊</div>
+    </div>
+
+    <div class="step">
+      <div class="circle">04</div>
+      <div class="content">
+        <h3>Controlled Shop Floor</h3>
+        <p>Maintaining a clean, organized, and controlled environment.</p>
+      </div>
+      <div class="icon">🏭</div>
+    </div>
+
+    <div class="step">
+      <div class="circle">05</div>
+      <div class="content">
+        <h3>Qualified Professionals</h3>
+        <p>Certified workforce trained to stay ahead of advancements.</p>
+      </div>
+      <div class="icon">🎓</div>
+    </div>
+ <div class="step">
+      <div class="circle">05</div>
+      <div class="content">
+        <h3>Committed Deliveries</h3>
+        <p>On-time delivery schedules that ensure reliability and customer trust.</p>
+      </div>
+      <div class="icon">⏱️</div>
+    </div>
+
+	   <div class="step">
+      <div class="circle">05</div>
+      <div class="content">
+        <h3>24-Hour Working Shift</h3>
+        <p>Round-the-clock operations to meet urgent demands and large-scale production.</p>
+      </div>
+      <div class="icon">🌙</div>
+    </div>
+
 
   </div>
 </section>
 
+
+  <!-- PRODUCTS -->
 <!-- PRODUCTS -->
 <section id="products" class="products">
   <div class="container">
     <h2 class="section-title">Our Products</h2>
     <div class="row g-4 justify-content-center">
-      <!-- Each Product Card -->
-      <div class="col-md-4"><div class="card"><div class="card-inner"><div class="card-front"><h3>Plastic Moulds</h3><p>Durable & precise moulds.</p></div><div class="card-back"><img src="images/product1.jpeg" alt="Plastic Moulds"></div></div></div></div>
-      <div class="col-md-4"><div class="card"><div class="card-inner"><div class="card-front"><h3>Press Tools</h3><p>High-performance tools.</p></div><div class="card-back"><img src="images/product2.jpeg" alt="Press Tools"></div></div></div></div>
-      <div class="col-md-4"><div class="card"><div class="card-inner"><div class="card-front"><h3>Compression Moulding</h3><p>Precision components.</p></div><div class="card-back"><img src="images/product3.jpeg" alt="Compression"></div></div></div></div>
-      <div class="col-md-4"><div class="card"><div class="card-inner"><div class="card-front"><h3>Plastic Components</h3><p>Automobile & Insert Moulds.</p></div><div class="card-back"><img src="images/product4.jpeg" alt="Plastic Components"></div></div></div></div>
-      <div class="col-md-4"><div class="card"><div class="card-inner"><div class="card-front"><h3>PDC Castings</h3><p>Durable die-cast solutions.</p></div><div class="card-back"><img src="images/product5.jpeg" alt="PDC"></div></div></div></div>
-      <div class="col-md-4"><div class="card"><div class="card-inner"><div class="card-front"><h3>Machined Components</h3><p>High-accuracy products.</p></div><div class="card-back"><img src="images/product6.jpeg" alt="Machined"></div></div></div></div>
-      <div class="col-md-4"><div class="card"><div class="card-inner"><div class="card-front"><h3>Jigs & Fixtures</h3><p>Custom-engineered jigs.</p></div><div class="card-back"><img src="images/product7.jpeg" alt="Jigs"></div></div></div></div>
+
+      <!-- Plastic Moulds -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-content">
+                <h3>Plastic Moulds</h3>
+                <p>Durable & precise moulds designed for industrial excellence.</p>
+              </div>
+            </div>
+            <div class="card-back">
+              <img src="images/product1.jpeg" alt="Plastic Moulds" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Press Tools -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-content">
+                <h3>Press Tools</h3>
+                <p>High-performance tools ensuring accuracy & strength.</p>
+              </div>
+            </div>
+            <div class="card-back">
+              <img src="images/product2.jpeg" alt="Press Tools" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Compression Moulding Components -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-content">
+                <h3>Compression Moulding Components</h3>
+                <p>Precision components designed for high performance.</p>
+              </div>
+            </div>
+            <div class="card-back">
+              <img src="images/product3.jpeg" alt="Compression Moulding Components" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plastic Components -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-content">
+                <h3>Plastic Components</h3>
+                <p>Automobile, Sliprings, Regulators & Insert Moulds.</p>
+              </div>
+            </div>
+            <div class="card-back">
+              <img src="images/product4.jpeg" alt="Plastic Components" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PDC Castings -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-content">
+                <h3>PDC Castings</h3>
+                <p>Reliable die-cast solutions designed for durability.</p>
+              </div>
+            </div>
+            <div class="card-back">
+              <img src="images/product5.jpeg" alt="PDC Castings" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Machined Components -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-content">
+                <h3>Machined Components</h3>
+                <p>High-accuracy components for industrial excellence.</p>
+              </div>
+            </div>
+            <div class="card-back">
+              <img src="images/product6.jpeg" alt="Machined Components" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jigs & Fixtures -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-content">
+                <h3>Jigs & Fixtures</h3>
+                <p>Custom-engineered jigs ensuring precision & efficiency.</p>
+              </div>
+            </div>
+            <div class="card-back">
+              <img src="images/product7.jpeg" alt="Jigs & Fixtures" />
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- CUSTOMERS -->
-<section id="customers" class="customer-logos">
-  <div class="customercontainer">
-    <h2 class="section-title">Our Trusted Customers</h2>
-    <div class="logos-slider">
-      <div class="logos-wrapper">
-        <div class="logo-item"><img src="images/customer-logo1.jpg" alt="Customer 1"></div>
-        <div class="logo-item"><img src="images/customer-logo2.jpg" alt="Customer 2"></div>
-        <div class="logo-item"><img src="images/customer-logo3.png" alt="Customer 3"></div>
-        <div class="logo-item"><img src="images/customer-logo4.png" alt="Customer 4"></div>
-        <div class="logo-item"><img src="images/customer-logo5.png" alt="Customer 5"></div>
-        <div class="logo-item"><img src="images/customer-logo6.jpg" alt="Customer 6"></div>
+
+<section id="customer-logos" class="customer-logos">
+    <div class="customercontainer">
+        <h2 class="section-title " >Our Trusted Customers</h2>
+        
+        <!-- Running Logos Container -->
+        <div class="logos-slider">
+            <div class="logos-wrapper">
+                <div class="logo-item">
+                    <img src="images/customer-logo1.jpg" alt="Customer 1" class="logo-img">
+                </div>
+                <div class="logo-item">
+                    <img src="images/customer-logo2.jpg" alt="Customer 2" class="logo-img">
+                </div>
+                <div class="logo-item">
+                    <img src="images/customer-logo3.png" alt="Customer 3" class="logo-img">
+                </div>
+                <div class="logo-item">
+                    <img src="images/customer-logo4.png" alt="Customer 4" class="logo-img">
+                </div>
+				<div class="logo-item">
+                    <img src="images/customer-logo5.png" alt="Customer 5" class="logo-img">
+                </div>
+				<div class="logo-item">
+                    <img src="images/customer-logo6.jpg" alt="Customer 6" class="logo-img">
+                </div>
+                <!-- Repeat the logos if necessary to create a continuous loop effect -->
+                <div class="logo-item">
+                    <img src="images/customer-logo1.jpg" alt="Customer 1" class="logo-img">
+                </div>
+                <div class="logo-item">
+                    <img src="images/customer-logo2.jpg" alt="Customer 2" class="logo-img">
+                </div>
+                <div class="logo-item">
+                    <img src="images/customer-logo3.png" alt="Customer 3" class="logo-img">
+                </div>
+                <div class="logo-item">
+                    <img src="images/customer-logo4.png" alt="Customer 4" class="logo-img">
+                </div>
+				<div class="logo-item">
+                    <img src="images/customer-logo5.png" alt="Customer 5" class="logo-img">
+                </div>
+				<div class="logo-item">
+                    <img src="images/customer-logo6.jpg" alt="Customer 6" class="logo-img">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- MACHINERY -->
+  <section id="machinery" class="machinery">
+    <div class="machinerycontainer">
+      <h2 class="section-title">Shop Floor Facilities </h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="machinery-card">
+            <img src="images/machine2.jpeg" alt="CNC Machine">
+            <div class="machinery-info">
+              <h3>Vertical Machining Center</h3>
+              <p>Bed size:1100x650 | Make: HASS USA</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="machinery-card">
+            <img src="images/machine3.jpeg" alt="Surface Grinding Machine">
+            <div class="machinery-info">
+              <h3>Surface Grinding Machine</h3>
+              <p>Bed size:450x150 | Make: KENT TAIWAN</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- MACHINERY -->
-<section id="machinery" class="machinery">
-  <div class="machinerycontainer">
-    <h2 class="section-title">Shop Floor Facilities</h2>
-    <div class="row g-4">
-      <div class="col-md-4"><div class="machinery-card"><img src="images/machine2.jpeg" alt="VMC"><div class="machinery-info"><h3>Vertical Machining Center</h3><p>Bed: 1100x650 | Make: HASS USA</p></div></div></div>
-      <div class="col-md-4"><div class="machinery-card"><img src="images/machine3.jpeg" alt="Grinding"><div class="machinery-info"><h3>Surface Grinding Machine</h3><p>Bed: 450x150 | Make: KENT TAIWAN</p></div></div></div>
-    </div>
-  </div>
-</section>
+  </section>
 
 <!-- CONTACT -->
+<!-- ✅ Contact Section -->
 <section id="contact" class="contact">
   <div class="container">
-    <h2 class="section-title">Get in Touch</h2>
-    <div class="row">
+	   <h2 class="section-title">Get in Touch</h2>
+	  <div class="row">
       <div class="col-md-6">
         <div class="glass-card text-start">
           <h4>Sales & Admin</h4>
           <p><strong>N. Kathiresan</strong><br>📞 9659809982</p>
           <p><strong>C. Chinnasamy</strong><br>📞 8608860138</p>
-          <p>📧 design@microtooling.in</p>
+		  <p>📧 design@microtooling.in</p>
           <p>📧 microtooling.sales@gmail.com</p>
           <p>📍 No 14, VLC Kakkanji Nagar, Vazhuthalambedu Mani Road, Kundrathur, Chennai - 69</p>
         </div>
       </div>
-      <div class="col-md-6">
-        <form id="contact-form" class="glass-card">
-          <div class="input-group"><i class="fas fa-user"></i><input type="text" name="name" required><label>Your Name</label></div>
-          <div class="input-group"><i class="fas fa-envelope"></i><input type="email" name="email" required><label>Your Email</label></div>
-          <div class="input-group textarea"><i class="fas fa-comment-dots"></i><textarea name="message" required></textarea><label>Your Message</label></div>
-          <button type="submit" class="btn-gradient"><span>Send Message</span><i class="fas fa-paper-plane"></i></button>
-        </form>
-        <p id="form-status"></p>
+	<div class="col-md-6">
+   
+
+    <form id="contact-form" class="glass-card">
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input type="text" name="name" required />
+        <label>Your Name</label>
       </div>
-    </div>
+
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" name="email" required />
+        <label>Your Email</label>
+      </div>
+
+      <div class="input-group textarea">
+        <i class="fas fa-comment-dots"></i>
+        <textarea name="message" required></textarea>
+        <label>Your Message</label>
+      </div>
+
+      <button type="submit" class="btn-gradient">
+        <span>Send Message</span>
+        <i class="fas fa-paper-plane"></i>
+      </button>
+    </form>
+
+    <!-- Success / Error Message -->
+    <p id="form-status"></p>
   </div>
+	  </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="container">
-    <p>&copy; 2025 Microtooling. All rights reserved.</p>
-  </div>
-</footer>
+<!-- FontAwesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-<!-- JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="script.js"></script>
+<!-- EmailJS -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
-  (function(){ emailjs.init("0dd2o7MtcSTI4e00X"); })();
+  (function(){
+    emailjs.init("0dd2o7MtcSTI4e00X"); // 🔹 Replace with your EmailJS User ID
+  })();
+
   document.getElementById("contact-form").addEventListener("submit", function(e){
     e.preventDefault();
+
     emailjs.send("service_9x75eed","template_p1bd6pd",{
       to_email: "design@microtooling.in",
       from_name: this.name.value,
       from_email: this.email.value,
       message: this.message.value
-    }).then(()=>{document.getElementById("form-status").innerText="✅ Message sent!";},
-             (error)=>{document.getElementById("form-status").innerText="❌ Failed. Try again!"; console.error(error);});
+    }).then(function(){
+      document.getElementById("form-status").innerText = "✅ Message sent successfully!";
+    }, function(error){
+      document.getElementById("form-status").innerText = "❌ Failed to send. Try again!";
+      console.error(error);
+    });
   });
 </script>
+
+
+<!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Microtooling. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+   <!-- Vanta.js Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.birds.min.js"></script>
+
+ <script>
+    VANTA.BIRDS({
+      el: "#birds-bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      backgroundColor: 0x0e376d,   // background color
+      backgroundAlpha: 1,
+      color1: 0xff0000,
+      color2: 0x00d1ff,
+      colorMode: "varianceGradient",
+      quantity: 5,
+      birdSize: 1,
+      wingSpan: 30,
+      speedLimit: 5,
+      separation: 20,
+      alignment: 20,
+      cohesion: 20
+    })
+  </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
