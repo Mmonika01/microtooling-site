@@ -1,0 +1,11 @@
+[
+  { "src": "images/product1.jpeg", "caption": "Plastic Moulds", "category": "moulds" },
+  { "src": "images/product2.jpeg", "caption": "Press Tools", "category": "tools" },
+  { "src": "images/product3.jpeg", "caption": "Compression Moulding Components", "category": "moulds" },
+  { "src": "images/product4.jpeg", "caption": "Plastic Components", "category": "components" },
+  { "src": "images/product5.jpeg", "caption": "Automobile Components", "category": "components" },
+  { "src": "images/product6.jpeg", "caption": "Sliprings & Regulators", "category": "components" },
+  { "src": "images/product7.jpeg", "caption": "Insert Moulds", "category": "moulds" },
+  { "src": "images/product8.jpeg", "caption": "Machined Components", "category": "components" },
+  { "src": "images/product9.jpeg", "caption": "Jigs & Fixtures", "category": "fixtures" }
+]

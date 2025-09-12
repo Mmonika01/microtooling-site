@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Microtooling</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Fancybox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      margin: 40px 0;
+      position: relative;
+    }
+    .section-title::after {
+      content: "";
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      display: block;
+      margin: 12px auto 0;
+      border-radius: 2px;
+    }
+
+    /* Filter buttons */
+    .filter-buttons {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .filter-buttons button {
+      background: transparent;
+      border: 2px solid #00c6ff;
+      color: #fff;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 25px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .filter-buttons button.active,
+    .filter-buttons button:hover {
+      background: #00c6ff;
+      color: #111;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      display: none; /* Hidden by default, shown by filter */
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      border-radius: 12px;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    .gallery-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 200, 255, 0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+   <header class="navbar">
+    <div class="logo-title">
+      <img src="images/logo.png" alt="Logo" class="logo">
+      <span class="site-title">MicroTooling Solutions</span>
+    </div>
+    <nav class="menu">
+     <a href="index.html#about">About</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#facilities">Facilities</a>
+    <a href="index.html#products">Products</a>
+    <a href="index.html#customers">Customers</a>
+    <a href="gallery.html" class="active">Gallery</a> <!-- Highlight current -->
+    <a href="index.html#contact">Contact</a>
+    </nav>
+	<!-- GLightbox CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+  </header>
+
+  <!-- Gallery -->
+  <section class="gallery">
+    <div class="container">
+      <h2 class="section-title">Our Gallery</h2>
+
+      <!-- Filter buttons -->
+      <div class="filter-buttons">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="moulds">Moulds</button>
+        <button data-filter="tools">Tools</button>
+        <button data-filter="components">Components</button>
+        <button data-filter="fixtures">Fixtures</button>
+      </div>
+
+      <!-- Images -->
+      <div class="row g-4" id="gallery-container">
+        <!-- Loaded dynamically from JSON -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Fancybox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+  <!-- Load Images Dynamically -->
+  <script>
+    fetch("images.json")
+      .then(res => res.json())
+      .then(images => {
+        let container = document.getElementById("gallery-container");
+        images.forEach(img => {
+          container.innerHTML += `
+            <div class="col-md-4 col-sm-6 gallery-item" data-category="${img.category}">
+              <a data-fancybox="gallery" href="${img.src}" data-caption="${img.caption}">
+                <img src="${img.src}" alt="${img.caption}">
+              </a>
+            </div>
+          `;
+        });
+
+        // Show all by default
+        document.querySelectorAll(".gallery-item").forEach(item => item.style.display = "block");
+
+        // Filter logic
+        const buttons = document.querySelectorAll(".filter-buttons button");
+        buttons.forEach(btn => {
+          btn.addEventListener("click", () => {
+            buttons.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            const filter = btn.getAttribute("data-filter");
+            document.querySelectorAll(".gallery-item").forEach(item => {
+              if (filter === "all" || item.dataset.category === filter) {
+                item.style.display = "block";
+              } else {
+                item.style.display = "none";
+              }
+            });
+          });
+        });
+      });
+  </script>
+
+</body>
+</html>
