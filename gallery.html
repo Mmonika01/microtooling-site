@@ -11,9 +11,8 @@
   <!-- Fancybox CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
 
-  <!-- AOS CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -21,10 +20,6 @@
       color: #fff;
     }
 
-    /* Navbar */
-   
-
-    /* Section Title */
     .section-title {
       font-size: 2.5rem;
       font-weight: 700;
@@ -42,42 +37,16 @@
       border-radius: 2px;
     }
 
-    /* Sticky filter + search container */
-    .filter-container {
-      
-      top: 70px; /* adjust for navbar height */
-      z-index: 999;
-      background: rgba(15, 32, 39, 0.9);
-      padding: 15px 10px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      margin-bottom: 25px;
-    }
-
-    /* Search Bar */
-    .search-bar input {
-      width: 100%;
-      max-width: 400px;
-      padding: 12px 18px;
-      border-radius: 25px;
-      border: 2px solid #00c6ff;
-      outline: none;
-      font-size: 1rem;
-      background: #fff;
-      color: #333;
-      transition: all 0.3s ease;
-    }
-    .search-bar input:focus {
-      border-color: #0072ff;
-      box-shadow: 0 0 10px rgba(0, 200, 255, 0.5);
-    }
-
     /* Filter buttons */
+    .filter-buttons {
+      text-align: center;
+      margin-bottom: 30px;
+    }
     .filter-buttons button {
       background: transparent;
       border: 2px solid #00c6ff;
       color: #fff;
-      padding: 8px 18px;
+      padding: 10px 20px;
       margin: 5px;
       border-radius: 25px;
       font-weight: 600;
@@ -90,99 +59,49 @@
       color: #111;
     }
 
-    /* Masonry grid */
-    #gallery-container {
-      column-count: 3;
-      column-gap: 20px;
-    }
-    @media (max-width: 992px) {
-      #gallery-container { column-count: 2; }
-    }
-    @media (max-width: 600px) {
-      #gallery-container { column-count: 1; }
-    }
-
     .gallery-item {
-      position: relative;
-      display: inline-block;
-      width: 100%;
-      margin-bottom: 20px;
       overflow: hidden;
       border-radius: 12px;
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      display: none; /* Hidden by default, shown by filter */
     }
     .gallery-item img {
       width: 100%;
-      display: block;
-      border-radius: 12px;
+      height: 250px;
+      object-fit: cover;
       transition: transform 0.5s ease;
+      border-radius: 12px;
     }
     .gallery-item:hover img {
-      transform: scale(1.08);
+      transform: scale(1.1);
     }
     .gallery-item:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 25px rgba(0, 200, 255, 0.5);
     }
-
-    /* Hover caption overlay */
-    .gallery-item a::after {
-      content: attr(data-caption);
-      position: absolute;
-      left: 0; right: 0; bottom: 0;
-      padding: 12px;
-      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-      color: #fff;
-      font-size: 1rem;
-      font-weight: 600;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      border-radius: 0 0 12px 12px;
-    }
-    .gallery-item:hover a::after {
-      opacity: 1;
-    }
-
-    /* No results card */
-    .no-results {
-      background: rgba(255, 255, 255, 0.08);
-      border: 2px dashed #00c6ff;
-      color: #fff;
-      font-size: 1.2rem;
-      font-weight: 600;
-      padding: 30px;
-      border-radius: 15px;
-      max-width: 400px;
-      margin: 40px auto;
-      box-shadow: 0 8px 20px rgba(0, 200, 255, 0.2);
-      animation: fadeInGlow 1s ease both;
-    }
-    @keyframes fadeInGlow {
-      0% { opacity: 0; transform: scale(0.9); box-shadow: 0 0 0 rgba(0, 200, 255, 0); }
-      100% { opacity: 1; transform: scale(1); box-shadow: 0 0 25px rgba(0, 200, 255, 0.5); }
-    }
   </style>
-  
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- Navbar -->
-  <header class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="images/SITEIDENTITY.png" alt="Logo" width="40" class="me-2"> MicroTooling
-      </a>
-      <nav class="ms-auto">
-        <a href="index.html#about" class="nav-link d-inline">About</a>
-        <a href="index.html#products" class="nav-link d-inline">Products</a>
-        <a href="index.html#machinery" class="nav-link d-inline">Machinery</a>
-        <a href="gallery.html" class="nav-link d-inline fw-bold">Gallery</a>
-        <a href="index.html#contact" class="nav-link d-inline">Contact</a>
-      </nav>
+   <header class="navbar">
+    <div class="logo-title">
+      <img src="images/SITEIDENTITY.png" alt="Logo" class="logo">
+      <span class="site-title">MicroTooling Solutions</span>
     </div>
+    <nav class="menu">
+     <a href="index.html#about">About</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#facilities">Facilities</a>
+    <a href="index.html#products">Products</a>
+    <a href="index.html#customers">Customers</a>
+    <a href="gallery.html" class="active">Gallery</a> <!-- Highlight current -->
+    <a href="index.html#contact">Contact</a>
+    </nav>
+	<!-- GLightbox CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
   </header>
 
   <!-- Gallery -->
@@ -190,110 +109,62 @@
     <div class="container">
       <h2 class="section-title">Our Gallery</h2>
 
-      <!-- Sticky Filter/Search -->
-      <div class="filter-container">
-        <div class="search-bar text-center mb-3">
-          <input type="text" id="searchInput" placeholder="🔍 Search products..." />
-        </div>
-        <div class="filter-buttons text-center">
-          <button class="active" data-filter="all">All</button>
-          <button data-filter="moulds">Moulds</button>
-          <button data-filter="tools">Tools</button>
-          <button data-filter="components">Components</button>
-          <button data-filter="fixtures">Fixtures</button>
-        </div>
+      <!-- Filter buttons -->
+      <div class="filter-buttons">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="moulds">Moulds</button>
+        <button data-filter="tools">Tools</button>
+        <button data-filter="components">Components</button>
+        <button data-filter="fixtures">Fixtures</button>
       </div>
 
-      <!-- Gallery Items -->
-      <div id="gallery-container"></div>
+      <!-- Images -->
+      <div class="row g-4" id="gallery-container">
+        <!-- Loaded dynamically from JSON -->
+      </div>
     </div>
   </section>
 
   <!-- Fancybox JS -->
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
-  <!-- AOS JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-  <!-- Custom JS -->
+  <!-- Load Images Dynamically -->
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      fetch("images.json")
-        .then(res => res.json())
-        .then(images => {
-          let container = document.getElementById("gallery-container");
+    fetch("images.json")
+      .then(res => res.json())
+      .then(images => {
+        let container = document.getElementById("gallery-container");
+        images.forEach(img => {
+          container.innerHTML += `
+            <div class="col-md-4 col-sm-6 gallery-item" data-category="${img.category}">
+              <a data-fancybox="gallery" href="${img.src}" data-caption="${img.caption}">
+                <img src="${img.src}" alt="${img.caption}">
+              </a>
+            </div>
+          `;
+        });
 
-          images.forEach((img, index) => {
-            container.innerHTML += `
-              <div class="gallery-item" 
-                   data-category="${img.category}" 
-                   data-caption="${img.caption.toLowerCase()}"
-                   data-aos="zoom-in" 
-                   data-aos-delay="${index * 100}">
-                <a data-fancybox="gallery" href="${img.src}" data-caption="${img.caption}">
-                  <img src="${img.src}" alt="${img.caption}">
-                </a>
-              </div>
-            `;
-          });
+        // Show all by default
+        document.querySelectorAll(".gallery-item").forEach(item => item.style.display = "block");
 
-          const items = document.querySelectorAll(".gallery-item");
-          const buttons = document.querySelectorAll(".filter-buttons button");
-          const searchInput = document.getElementById("searchInput");
-
-          // Add "No results" placeholder
-          const noResults = document.createElement("div");
-          noResults.className = "no-results text-center";
-          noResults.innerText = "⚠️ No results found. Try another category or search.";
-          noResults.style.display = "none";
-          container.appendChild(noResults);
-
-          function applyFilters() {
-            const filter = document.querySelector(".filter-buttons button.active").dataset.filter;
-            const searchText = searchInput ? searchInput.value.toLowerCase() : "";
-            let visibleCount = 0;
-
-            items.forEach(item => {
-              const matchesCategory = (filter === "all" || item.dataset.category === filter);
-              const matchesSearch = item.dataset.caption.includes(searchText);
-
-              if (matchesCategory && matchesSearch) {
-                item.style.display = "inline-block"; // works with masonry
-                visibleCount++;
+        // Filter logic
+        const buttons = document.querySelectorAll(".filter-buttons button");
+        buttons.forEach(btn => {
+          btn.addEventListener("click", () => {
+            buttons.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            const filter = btn.getAttribute("data-filter");
+            document.querySelectorAll(".gallery-item").forEach(item => {
+              if (filter === "all" || item.dataset.category === filter) {
+                item.style.display = "block";
               } else {
                 item.style.display = "none";
               }
             });
-
-            noResults.style.display = visibleCount === 0 ? "block" : "none";
-          }
-
-          // Filter button click
-          buttons.forEach(btn => {
-            btn.addEventListener("click", () => {
-              buttons.forEach(b => b.classList.remove("active"));
-              btn.classList.add("active");
-              applyFilters();
-            });
-          });
-
-          // Search typing
-          if (searchInput) {
-            searchInput.addEventListener("input", applyFilters);
-          }
-
-          // Initial load
-          applyFilters();
-
-          // Init AOS animations
-          AOS.init({
-            duration: 800,
-            once: true
           });
         });
-    });
+      });
   </script>
+
 </body>
 </html>
-
-
-
